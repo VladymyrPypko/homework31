@@ -18,11 +18,6 @@ function getRandomColor(){
     const color_2 = Math.floor(Math.random() * 256);
     const color_3 = Math.floor(Math.random() * 256);
 
-    return { color_1, color_2, color_3};
-}
-
-function applyRandomColor(colorRGB){
-    const { color_1, color_2, color_3 } = colorRGB;
     return `rgb( ${color_1}, ${color_2}, ${color_3})`;
 }
 
@@ -39,9 +34,7 @@ function getRandomCoordinates(){
 }
 
 setInterval(() => {
-    const colorRGB = getRandomColor();
-
-    block.style.backgroundColor = applyRandomColor(colorRGB);
+    block.style.backgroundColor = getRandomColor();
 }, 500)
 
 setInterval(() => {
